@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4a261;
+  background: transparent; /* Removido o fundo rosa/laranja para evitar interferência */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,12 +42,14 @@ h1 {
   position: relative;
   width: 100%;
   max-width: 1200px;
+  overflow: hidden; /* Evita que o fundo apareça em bordas */
 }
 
 .background {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
 }
 
 .label {
@@ -114,5 +116,11 @@ h1 {
   }
   header {
     padding: 10px;
+  }
+  .image-map-wrapper {
+    max-width: 100%; /* Garante que a imagem ocupe toda a largura em celulares */
+  }
+  .background {
+    object-fit: cover; /* Reforça o ajuste em telas menores */
   }
 }
