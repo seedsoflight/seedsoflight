@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  background-color: #000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+.image-map-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+}
+
+.label {
+  position: absolute;
+  color: #4d4417;
+  font-size: 1.8rem;
+  font-weight: 600;
+  z-index: 5;
+  pointer-events: auto;
+  cursor: pointer;
+  text-decoration: none;
+}
+.label:hover {
+  text-decoration: underline;
+}
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seeds of Light</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="lang-dropdown">
+    <select id="languageDropdown"></select>
+  </div>
+
+  <header>
+    <h1></h1>
+  </header>
+
+  <main class="image-map-wrapper">
+    <img src="bg_main.jpg" usemap="#image-map" alt="Seeds of Light" class="background" id="bgImage" />
+
+    <map name="image-map">
+      <area alt="who" href="#who" coords="525,3591,2014,4177" shape="rect" />
+      <area alt="what" href="#what" coords="3817,4177,2299,3597" shape="rect" />
+      <area alt="join" href="#join" coords="1996,5127,484,4458" shape="rect" />
+      <area alt="resources" href="#resources" coords="2286,4467,3826,5122" shape="rect" />
+      <area alt="donations" href="#donations" coords="2024,5910,470,5343" shape="rect" />
+      <area alt="contact" href="#contact" coords="2263,5348,3812,5915" shape="rect" />
+    </map>
+
+    <!-- Labels posicionadas dinamicamente por JS -->
+    <a class="label" id="label-who"></a>
+    <a class="label" id="label-what"></a>
+    <a class="label" id="label-join"></a>
+    <a class="label" id="label-resources"></a>
+    <a class="label" id="label-donations"></a>
+    <a class="label" id="label-contact"></a>
+  </main>
+
+  <!-- Biblioteca para tornar o map responsivo -->
+  <script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
