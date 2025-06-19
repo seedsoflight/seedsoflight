@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #000000; /* Fundo alterado para preto */
+  background: #000000; /* Fundo preto sólido */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,13 +9,13 @@ body {
 }
 
 .lang-dropdown {
-  margin: 20px;
+  margin: 15px;
   z-index: 10;
 }
 
 .lang-dropdown select {
-  padding: 10px;
-  font-size: clamp(0.9em, 2vw, 1.2em);
+  padding: 8px;
+  font-size: clamp(0.8em, 2vw, 1.1em);
   border-radius: 5px;
   background: #e76f51;
   color: white;
@@ -25,7 +25,7 @@ body {
 
 header {
   text-align: center;
-  padding: 20px;
+  padding: 15px;
 }
 
 h1 {
@@ -42,42 +42,42 @@ h1 {
   position: relative;
   width: 100%;
   max-width: 1200px;
-  overflow: hidden; /* Evita que o fundo apareça em bordas */
+  overflow: hidden;
 }
 
 .background {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+  object-fit: contain; /* Mudado para contain para evitar cortes */
 }
 
 .label {
   position: absolute;
-  color: #fff; /* Alterado para branco para melhor contraste com fundo preto */
-  padding: clamp(5px, 1.5vw, 10px);
-  border-radius: 5px;
+  color: #fff;
+  padding: clamp(4px, 1.2vw, 8px);
+  border-radius: 3px;
   text-decoration: none;
-  font-size: clamp(0.7em, 1.5vw, 1.2em);
+  font-size: clamp(0.6em, 1.3vw, 1em);
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   transition: all 0.3s ease;
 }
 
 .label:hover {
-  color: #e0e0e0; /* Tom de branco mais claro no hover */
+  color: #e0e0e0;
 }
 
 .label::before {
   content: '';
   width: 0;
   height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid #e9c46a;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #e9c46a;
   position: absolute;
-  bottom: -8px;
+  bottom: -6px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -88,39 +88,45 @@ h1 {
 
 @media (max-width: 1024px) {
   h1 {
-    font-size: clamp(1.1em, 3.5vw, 2.5em);
-  }
-  .label {
-    font-size: clamp(0.6em, 1.2vw, 1em);
-    padding: clamp(4px, 1vw, 8px);
-  }
-  .lang-dropdown select {
-    font-size: clamp(0.8em, 1.8vw, 1.1em);
-  }
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: clamp(1em, 3vw, 2em);
+    font-size: clamp(1em, 3vw, 2.5em);
   }
   .label {
     font-size: clamp(0.5em, 1vw, 0.9em);
     padding: clamp(3px, 0.8vw, 6px);
   }
+  .lang-dropdown select {
+    font-size: clamp(0.7em, 1.6vw, 1em);
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: clamp(0.9em, 2.5vw, 1.8em);
+  }
+  .label {
+    font-size: clamp(0.4em, 0.9vw, 0.8em);
+    padding: clamp(2px, 0.6vw, 5px);
+  }
   .lang-dropdown {
-    margin: 10px;
+    margin: 8px;
   }
   .lang-dropdown select {
-    font-size: clamp(0.7em, 1.5vw, 1em);
-    padding: 8px;
+    font-size: clamp(0.6em, 1.3vw, 0.9em);
+    padding: 6px;
   }
   header {
-    padding: 10px;
+    padding: 8px;
   }
   .image-map-wrapper {
-    max-width: 100%; /* Garante que a imagem ocupe toda a largura em celulares */
+    max-width: 100%;
   }
   .background {
-    object-fit: cover; /* Reforça o ajuste em telas menores */
+    object-fit: contain; /* Reforça o ajuste em celulares */
+  }
+  .label::before {
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    bottom: -5px;
   }
 }
