@@ -52,7 +52,6 @@ h1 {
 
 .label {
   position: absolute;
-  background: #e9c46a;
   color: #264653;
   padding: clamp(5px, 1.5vw, 10px);
   border-radius: 5px;
@@ -65,7 +64,7 @@ h1 {
 }
 
 .label:hover {
-  background: #d4a959;
+  color: #1a3c3c;
 }
 
 .label::before {
