@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: transparent; /* Removido o fundo rosa/laranja para evitar interferência */
+  background: #000000; /* Fundo alterado para preto */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,7 +54,7 @@ h1 {
 
 .label {
   position: absolute;
-  color: #264653;
+  color: #fff; /* Alterado para branco para melhor contraste com fundo preto */
   padding: clamp(5px, 1.5vw, 10px);
   border-radius: 5px;
   text-decoration: none;
@@ -66,7 +66,7 @@ h1 {
 }
 
 .label:hover {
-  color: #1a3c3c;
+  color: #e0e0e0; /* Tom de branco mais claro no hover */
 }
 
 .label::before {
