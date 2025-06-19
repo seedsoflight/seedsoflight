@@ -54,7 +54,7 @@ h1 {
 
 .label {
   position: absolute;
-  color: #4d4417; /* Nova cor do texto */
+  color: #4d4417 !important; /* Força a cor marrom escura */
   padding: clamp(4px, 1.2vw, 8px);
   border-radius: 3px;
   text-decoration: none;
@@ -66,15 +66,15 @@ h1 {
 }
 
 .label:hover {
-  color: #665a20; /* Tom mais escuro no hover para contraste */
+  color: #665a20 !important; /* Tom mais escuro no hover */
 }
 
-/* Removido o ::before para eliminar a seta */
 @media (max-width: 1024px) {
   h1 {
     font-size: clamp(1em, 3vw, 2.5em);
   }
   .label {
+    color: #4d4417 !important; /* Reforça a cor em tablets */
     font-size: clamp(0.5em, 1vw, 0.9em);
     padding: clamp(3px, 0.8vw, 6px);
   }
@@ -88,6 +88,7 @@ h1 {
     font-size: clamp(0.9em, 2.5vw, 1.8em);
   }
   .label {
+    color: #4d4417 !important; /* Reforça a cor em celulares */
     font-size: clamp(0.4em, 0.9vw, 0.8em);
     padding: clamp(2px, 0.6vw, 5px);
   }
